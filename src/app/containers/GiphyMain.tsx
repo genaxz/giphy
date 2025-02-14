@@ -68,7 +68,7 @@ export default function GiphyMain() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Giphy Search</h1>
+      <h1 className={styles.appTitle}>GIPHY Search Engine</h1>
       <SearchGifs setSearchTerm={handleSearchTermChange} />
       {error && (
         <div className={styles.error} role="alert" aria-live="assertive">

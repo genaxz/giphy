@@ -1,4 +1,4 @@
-# Giphy Search App
+# Giphy Search Engine Application
 
 This is a Next.js project that allows users to search and browse GIFs using the Giphy API. The app features infinite scrolling, debounced search, and a responsive design.
 

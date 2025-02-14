@@ -29,7 +29,7 @@ export default function SearchGifs({ setSearchTerm }: SearchGifsProps) {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Find your perfect GIF"
+          placeholder="Find your GIF"
           className={styles.searchInput}
         />
         <button type="submit" className={styles.searchButton}>
