@@ -1,0 +1,50 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.searchForm {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.searchInput {
+  padding: 10px;
+  font-size: 16px;
+  width: 70%;
+  max-width: 400px;
+}
+
+.searchButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.gifGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.gifItem {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.noMore {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #aaa;
+}
