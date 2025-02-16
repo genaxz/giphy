@@ -15,6 +15,13 @@ This is a Next.js project that allows users to search and browse GIFs using the 
 First, clone the repository:
 
 ```bash
-git clone https://github.com/your-username/giphy-search-app.git
-cd giphy-search-app
+git clone https://github.com/genaxz/giphy.git
+cd giphy
+
+npm i yarn --global
+yarn install
+
+To Start the Application
+yarn dev
+http://localhost:3000
 ```
