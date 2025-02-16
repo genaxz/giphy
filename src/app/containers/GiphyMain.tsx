@@ -64,7 +64,7 @@ export default function GiphyMain() {
 
   const handleSearchTermChange = debounce((term: string) => {
     setSearchTerm(term);
-  }, 300);
+  }, 600);
 
   return (
     <div className={styles.container}>

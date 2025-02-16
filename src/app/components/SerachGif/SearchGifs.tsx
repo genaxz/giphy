@@ -21,6 +21,12 @@ export default function SearchGifs({ setSearchTerm }: SearchGifsProps) {
     setSearchTerm(input);
   };
 
+  const handleSearchTermChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInput(e.target.value);
+    e.preventDefault();
+    setSearchTerm(e.target.value);
+  };
+
   return (
     <div className={styles.searchContainer}>
       <form onSubmit={handleSubmit} className={styles.searchForm}>
@@ -28,7 +34,7 @@ export default function SearchGifs({ setSearchTerm }: SearchGifsProps) {
           ref={inputRef}
           type="text"
           value={input}
-          onChange={(e) => setInput(e.target.value)}
+          onChange={handleSearchTermChange}
           placeholder="Find your GIF"
           className={styles.searchInput}
         />
