@@ -2,6 +2,7 @@
 import { SavedGifsProvider } from './components/context/SavedGifsContext';
 import { useReportWebVitals } from 'next/web-vitals';
 import reportWebVitals from './reportWebVitals';
+import './globals.css';
 
 export default function RootLayout({
   children,
