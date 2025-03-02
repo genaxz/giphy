@@ -1,0 +1,138 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: var(--spacing-unit);
+  color: white;
+  border-radius: 4px;
+  margin-bottom: var(--spacing-unit);
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-gray);
+  border-radius: 4px;
+  margin-bottom: var(--spacing-unit);
+}
+
+.navbar a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: var(--spacing-unit);
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.contentArea {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-unit);
+}
+
+.mainContent {
+  background-color: white;
+  padding: var(--spacing-unit);
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+  background-color: var(--light-gray);
+  padding: var(--spacing-unit);
+  border-radius: 4px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: var(--spacing-unit);
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-unit);
+  margin-top: var(--spacing-unit);
+}
+
+.card {
+  background-color: white;
+  padding: var(--spacing-unit);
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: var(--text-color);
+  color: white;
+  text-align: center;
+  padding: var(--spacing-unit);
+  border-radius: 4px;
+  margin-top: var(--spacing-unit);
+}
+
+/* Media queries for responsive layout */
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .contentArea {
+    flex-direction: row;
+  }
+
+  .mainContent {
+    flex: 2;
+  }
+
+  .sidebar {
+    flex: 1;
+  }
+
+  .cardContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .cardContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Only apply on hover if device supports hover */
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+  }
+}
+
+/* Specific styles for printing */
+@media print {
+  .navbar,
+  .sidebar,
+  footer {
+    display: none;
+  }
+
+  body {
+    color: black;
+    background: white;
+  }
+
+  .mainContent {
+    box-shadow: none;
+  }
+}

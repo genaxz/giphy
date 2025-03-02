@@ -1,0 +1,69 @@
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$border-radius: 4px;
+$base-font-size: 16px;
+
+// Mixins
+@mixin buttonStyle($bg-color, $text-color: white) {
+  background-color: $bg-color;
+  color: $text-color;
+  border-radius: $border-radius;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: $base-font-size;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+// Nesting
+.card {
+  border-radius: $border-radius;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+
+  .cardHeader {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1rem;
+
+    h2 {
+      color: $primary-color;
+      margin-top: 0;
+    }
+  }
+
+  .cardBody {
+    p {
+      line-height: 1.5;
+    }
+  }
+
+  .cardFooter {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+// Using the mixin
+.primaryButton {
+  @include buttonStyle($primary-color);
+}
+
+.secondaryButton {
+  @include buttonStyle($secondary-color);
+}
+
+.outlineButton {
+  @include buttonStyle(transparent, $primary-color);
+  border: 1px solid $primary-color;
+
+  &:hover {
+    background-color: $primary-color;
+    color: white;
+  }
+}
