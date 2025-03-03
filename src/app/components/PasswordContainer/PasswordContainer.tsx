@@ -288,7 +288,7 @@ const PasswordStrengthContainer = () => {
         pwd.toLowerCase().includes('123');
 
       // Create final result
-      let result = {
+      const result = {
         score: aiScore,
         feedback: aiFeedback,
         isBreached: isBreached,
@@ -314,20 +314,6 @@ const PasswordStrengthContainer = () => {
       setLoading(false);
     }
   };
-
-  interface Strength {
-    score: number;
-    feedback: string;
-    isBreached: boolean;
-  }
-
-  interface Requirements {
-    length: boolean;
-    uppercase: boolean;
-    lowercase: boolean;
-    number: boolean;
-    special: boolean;
-  }
 
   const handlePasswordChange = (
     e: React.ChangeEvent<HTMLInputElement>
